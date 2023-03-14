@@ -34,7 +34,7 @@ def denormalizeMeanVariance(in_img, mean=(0.485, 0.456, 0.406), variance=(0.229,
     img = np.clip(img, 0, 255).astype(np.uint8)
     return img
 
-def resize_aspect_ratio(img, square_size, interpolation, mag_ratio=1):
+def resize_aspect_ratio(img, square_size, interpolation=cv2.INTER_LINEAR, mag_ratio=1):
     height, width, channel = img.shape
 
     # magnify image size
